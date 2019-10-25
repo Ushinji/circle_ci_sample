@@ -1,6 +1,6 @@
 # sum_test.rb
 require 'minitest/autorun'
-require './sum'
+require 'ruby/sum'
 
 class SumTest < Minitest::Test
   def test_sum

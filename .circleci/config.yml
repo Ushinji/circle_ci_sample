@@ -3,13 +3,13 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/ruby:2.6.5
+      - image: circleci/python:3.7.4
     working_directory: ~/repo
     steps:
       - checkout
       - run: 
           name: Run test
-          command: ruby sum_test.rb
+          command: python3 -m unittest sum_test.py
 
 workflows:
   version: 2

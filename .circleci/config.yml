@@ -3,13 +3,16 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/python:3.7.4
+      - image: circleci/node:13.0.1
     working_directory: ~/repo
     steps:
       - checkout
       - run: 
+          name: npm install
+          command: npm install
+      - run: 
           name: Run test
-          command: python3 -m unittest sum_test.py
+          command: npm test
 
 workflows:
   version: 2

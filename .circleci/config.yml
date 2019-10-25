@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: 
           name: Run test
-          command: ruby ruby/sum_test.rb
+          command: ruby sum_test.rb
 
 workflows:
   version: 2
